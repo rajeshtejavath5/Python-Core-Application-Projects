@@ -43,6 +43,7 @@ class ATM:
                 if acc_holder_det.get("name")==entered_name and acc_holder_det.get("pin")==entered_pin:
                     if acc_holder_det.get("balance")<=0 or withdraw_amt>acc_holder_det.get("balance"):
                         print("Insufficient balance!")
+                        return
                     else:
                         print(f"Your Previous balance is ₹{acc_holder_det.get('balance')}")
                         acc_holder_det['balance']-=withdraw_amt
